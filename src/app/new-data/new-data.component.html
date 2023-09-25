@@ -1,0 +1,1796 @@
+
+<div class="container-fluid Employee-Data">
+    <div class="col-md-2 all-btn">
+  <button class="show-btn">Show all</button>
+  <button class="Duplicate-btn">Duplicate</button>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row d-flex align-item-center justify-content-cneter main-heading">
+        <div class="col-md-2">
+          <h1 class="heading">Folio Number</h1>
+        </div>
+        <div class="col-md-2">
+          <h1 class="heading">Number of Accounts</h1>
+        </div>
+        <div class="col-md-2">
+          <h1 class="heading">Number of Distributor</h1>
+        </div>
+          <div class="col-md-2">
+            <h1 class="heading">Number of AMC</h1>
+          </div>
+          <div class="col-md-2">
+            <h1 class="heading">Number of Transaction</h1>
+          </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <div class="row d-flex align-item-center justify-content-cneter w-100" *ngFor="let item of TotalData.Data.data">
+                  <div class="col-md-2">
+                    <h1 class="heading1">{{item.Folio}}</h1>
+                  </div>
+                  <div class="col-md-2">
+                  <h1 class="heading1">{{item.NumberAccounts}}</h1>
+                  </div>
+                  <div class="col-md-2">
+                    <h1 class="heading1">{{item.NumberDistributor}}</h1>
+                  </div>
+                    <div class="col-md-2">
+                      <h1 class="heading1">{{item.NumberAMC}}</h1>
+                    </div>
+                    <div class="col-md-2">
+                      <h1 class="heading1">{{item.NumberTransaction}}</h1>
+                    </div>
+                </div> 
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row d-flex">
+                  <div class="col-md-2">
+                        <h1 class="heading1">Distributor Name </h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Broker ID</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Email-ID</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Phone Number</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Number of Transaction</h1>
+                      </div>
+                  </div>
+                  <div class="accordion" id="sub-accordionExample">
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="sub-headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div  class="col-md-2 username">
+                                  <h1  class="heading2">Centricity</h1>
+                                </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseOne" class="accordion-collapse collapse" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1" *ngFor="let item of TotalData.Data.data">
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company.TransactionDate}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company.InstrumentName}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company.TransactionType}}</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.NAV}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.Quantity}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.TotalAmount}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.AccountName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.ClientName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company.DistributorName}}</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1" *ngFor="let item of TotalData.Data.data">
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company1.TransactionDate}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company1.InstrumentName}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.Centricity.company1.TransactionType}}</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.NAV}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.Quantity}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.TotalAmount}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.AccountName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.ClientName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.Centricity.company1.DistributorName}}</h1>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div> -->
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
+                                <div  class="col-md-2 username">
+                                  <h1  class="heading2">IIFL</h1>
+                                </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1" *ngFor="let item of TotalData.Data.data">
+                                          <div class="col-md-1">
+                                            <h1>{{item.IIFL.company.TransactionDate}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.IIFL.company.InstrumentName}}</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>{{item.IIFL.company.TransactionType}}</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.NAV}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.Quantity}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.TotalAmount}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.AccountName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.ClientName}}</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>{{item.IIFL.company.DistributorName}}</h1>
+                                            </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <div class="accordion-item" style="margin-top: 20px;">
+                          <h2 class="accordion-header" id="sub-headingThree">
+                            <div class="row d-flex">
+                              <div class="col-md-2">
+                                    <h1 class="heading1">Account Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Client Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Email-ID</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Phone Number</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Number of Transaction</h1>
+                                  </div>
+                              </div>
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="false" aria-controls="sub-collapseThree">
+                                <div  class="col-md-2 username">
+                                  <h1  class="heading1">Kanchan Shinde</h1>
+                                  <h1  class="heading1">Kanchan Digamber Shinde</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseThree" class="accordion-collapse collapse" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body"> 
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="false" aria-controls="sub-collapseFour">
+  
+                                <div  class="col-md-2 username">
+                                <h1  class="heading1">Chowdry Associates</h1>
+                                <h1  class="heading1">Chowdry Associates</h1>
+                                </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseFour" class="accordion-collapse collapse" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 20px;">
+                          <h2 class="accordion-header" id="sub-headingFive">
+                            <div class="row d-flex">
+                              <div class="col-md-2">
+                                    <h1 class="heading1">Instrument Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">ISIN Code</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">AMC Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Phone Number</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Number of Transaction</h1>
+                                  </div>
+                              </div>
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFive" aria-expanded="false" aria-controls="sub-collapseFive">
+                                <div  class="col-md-2 username1">
+                                  <h1  class="heading1">Aditya Birla Sun Life Dir...</h1>
+                                  <h1  class="heading1">INF209K01VA3</h1>
+                                  <h1  class="heading1">Aditya Birla Sun Life AMC</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseFive" class="accordion-collapse collapse" aria-labelledby="sub-headingFive" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingSix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSix" aria-expanded="false" aria-controls="sub-collapseSix">
+                                <div  class="col-md-2 username1">
+                                  <h1  class="heading1">Aditya Birla Sun Life Ind...</h1>
+                                  <h1  class="heading1">INF209K01RU9</h1>
+                                  <h1  class="heading1">Aditya Birla Sun Life AMC</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseSix" class="accordion-collapse collapse" aria-labelledby="sub-headingSix" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+  
+
+  <div class="accordion" style="margin-top: 10px;" id="accordionExample">
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <div class="row d-flex align-item-center justify-content-cneter w-100">
+                  <div class="col-md-2">
+                    <h1 class="heading1">1000010598</h1>
+                  </div>
+                  <div class="col-md-2">
+                    <h1 class="heading1">3</h1>
+                  </div>
+                  <div class="col-md-2">
+                    <h1 class="heading1">4</h1>
+                  </div>
+                    <div class="col-md-2">
+                      <h1 class="heading1">1</h1>
+                    </div>
+                    <div class="col-md-2">
+                      <h1 class="heading1">20</h1>
+                    </div>
+                </div> 
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row d-flex">
+                  <div class="col-md-2">
+                        <h1 class="heading1">Distributor Name </h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Broker ID</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Email-ID</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Phone Number</h1>
+                      </div>
+                      <div class="col-md-2">
+                          <h1 class="heading1">Number of Transaction</h1>
+                      </div>
+                  </div>
+                  <div class="accordion" id="sub-accordionExample">
+                      <div class="accordion-item">
+                          <h2 class="accordion-header" id="sub-headingTwo">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Centricity
+                              </button>
+                          </h2>
+                          <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
+                                IIFL
+                              </button>
+                          </h2>
+                          <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <div class="accordion-item" style="margin-top: 20px;">
+                          <h2 class="accordion-header" id="sub-headingThree">
+                            <div class="row d-flex">
+                              <div class="col-md-2">
+                                    <h1 class="heading1">Account Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Client Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Email-ID</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Phone Number</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Number of Transaction</h1>
+                                  </div>
+                              </div>
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="false" aria-controls="sub-collapseThree">
+                                <div  class="col-md-2 username">
+                                  <h1  class="heading1">Kanchan Shinde</h1>
+                                  <h1  class="heading1">Kanchan Digamber Shinde</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseThree" class="accordion-collapse collapse" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="false" aria-controls="sub-collapseFour">
+  
+                                <div  class="col-md-2 username">
+                                <h1  class="heading1">Chowdry Associates</h1>
+                                <h1  class="heading1">Chowdry Associates</h1>
+                                </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseFour" class="accordion-collapse collapse" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 20px;">
+                          <h2 class="accordion-header" id="sub-headingFive">
+                            <div class="row d-flex">
+                              <div class="col-md-2">
+                                    <h1 class="heading1">Instrument Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">ISIN Code</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">AMC Name</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Phone Number</h1>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <h1 class="heading1">Number of Transaction</h1>
+                                  </div>
+                              </div>
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFive" aria-expanded="false" aria-controls="sub-collapseFive">
+                                <div  class="col-md-2 username1">
+                                  <h1  class="heading1">Aditya Birla Sun Life Dir...</h1>
+                                  <h1  class="heading1">INF209K01VA3</h1>
+                                  <h1  class="heading1">Aditya Birla Sun Life AMC</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseFive" class="accordion-collapse collapse" aria-labelledby="sub-headingFive" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="margin-top: 10px;">
+                          <h2 class="accordion-header" id="sub-headingSix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSix" aria-expanded="false" aria-controls="sub-collapseSix">
+                                <div  class="col-md-2 username1">
+                                  <h1  class="heading1">Aditya Birla Sun Life Ind...</h1>
+                                  <h1  class="heading1">INF209K01RU9</h1>
+                                  <h1  class="heading1">Aditya Birla Sun Life AMC</h1>
+                                  </div>
+                              </button>
+                          </h2>
+                          <div id="sub-collapseSix" class="accordion-collapse collapse" aria-labelledby="sub-headingSix" data-bs-parent="#sub-accordionExample">
+                              <div class="accordion-body">
+                                <div class="container-fluid main-container2">
+                                  <div class="row">
+                                    <div class="container-fluid">
+                                        <div class="row inner-data d-flex align-item-center justify-content-cneter">
+                                          <div class="col-md-1">
+                                            <h1>Transaction Date</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Instrument Name</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Transaction Type</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>NAV</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Quantity</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Total Amount</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Account Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Client Name</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Distributor Name</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                        <div class="row inner-box1">
+                                          <div class="col-md-1">
+                                            <h1>2023-05-02</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Kotak Small Cap Growth</h1>
+                                          </div>
+                                          <div class="col-md-1">
+                                            <h1>Purchase</h1>
+                                          </div>
+                                            <div class="col-md-1">
+                                              <h1>110.20</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>100</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>1102</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Kanchan Digamber Shinde</h1>
+                                            </div>
+                                            <div class="col-md-1">
+                                              <h1>Centricity</h1>
+                                            </div>
+                                        </div>
+                                  
+                                      </div>
+  
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+      </div>
+  </div>
+</div>
+

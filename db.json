@@ -1,0 +1,48 @@
+{
+  "Data":{
+    "data":[
+      {
+        "Folio":1000010598,
+        "NumberAccounts":5,
+        "NumberDistributor":2,
+        "NumberAMC":1,
+        "NumberTransaction":15,
+        "Centricity":{
+          "company":{
+            "TransactionDate":"02-05-2023",
+            "InstrumentName":"Kotak Small Cap Growth",
+            "TransactionType":"Purchase",
+            "NAV":110.20,
+            "Quantity":100,
+            "TotalAmount":1102,
+            "AccountName":"Kanchan Shinde",
+            "ClientName":"Kanchan Digamber Shinde",
+            "DistributorName":"Centricity"
+          },
+          "company1":{
+            "TransactionDate":"02-05-2023",
+            "InstrumentName":"Kotak Small Cap Growth",
+            "TransactionType":"Purchase",
+            "NAV":110.20,
+            "Quantity":100,
+            "TotalAmount":1102,
+            "AccountName":"Kanchan Shinde",
+            "ClientName":"Kanchan Digamber Shinde",
+            "DistributorName":"Centricity"
+          }
+        },
+        "transaction":[
+          {
+            "first":1
+          },
+          {},
+          {},
+          {
+          
+          }
+        ]
+      }
+    ]
+   }
+}
+

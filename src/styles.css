@@ -1,1 +1,203 @@
 /* You can add global styles to this file, and also import other style files */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  body{
+  margin: 0;  
+  font-family: 'Montserrat', sans-serif;
+  }
+  .heading{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #B69377;
+  }
+  .row1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    width: 1320px;
+    height: 50px;
+  }
+  .row{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    padding-top: 17px;
+  }
+  .user-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .col-md-5{
+    width: 70%;
+  }
+  .heading1{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-align: center;
+}
+.accordion-button{
+  height: 50px;
+  padding: 0;
+}
+  .container-fluid{
+    margin-top: 10px;
+    padding: 0;
+  }
+  .main-container{
+    width: 1310px;
+    height: 843px;
+    top: 238px;
+    left: 100px;
+    border: 1px solid black;
+  }
+  img{
+    width: 10px;
+    height: 10px;
+    color: #757575;
+  }
+  .main-container2{
+    width: 1270px;
+    top: 333px;
+    left: 120px;
+    border: 1px solid black;
+  }
+  .inner-box{
+    display: flex;
+    justify-content: start;
+    align-items: first baseline;
+  }
+  .inner-box h1{
+    padding-left: 20px;
+  }
+  .inner-data{
+    width: 1256px;
+    height: 35px;
+    top: 387px;
+    left: 174px;
+    margin: 5px;
+  }
+  .col-md-1{
+    width: 139px;
+    height: 35px;
+    top: 387px;
+    left: 174px;
+  }
+  .col-md-1 h1{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .inner-box1{
+    margin-top: 20px;
+    width: 1253px;
+    height: 45px;
+    top: 410px;
+    left: 140px;
+    margin: 5px;
+    border: 1px solid #757575;
+  }
+  .inner-box2{
+    width: 1271px;
+    height: 45px;
+    top: 410px;
+    left: 140px;
+    margin: 5px;
+    border: 1px solid #757575;
+  }
+  .IIFL{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  tbody{
+    border: 1px solid black;
+  }
+
+
+
+  /* accordion */
+.accordion-heading{
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+.accordion-heading ul,.accordion-content ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.accordion-heading ul li,.accordion-content ul li,.user-name li{
+  list-style: none;
+  font-size: 14px;
+}
+.accordion-content{
+  transition: 4s ease-in-out;
+  padding: 10px;
+  background: rgb(252,243,243);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(-100%);
+  }
+  50%{
+    transform: translateY(8%);
+  }
+  65%{
+    transform: translateY(-4%);
+  }
+  80%{
+    transform: translateY(4%);
+  }
+  95%{
+    transform: translateY(-2%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+.up-icon{
+  transition: 0.2s ease-out;
+}
+.icon{
+  animation-name: icon;
+  transform: rotate(180deg);
+  transition: 0.2s ease-out;
+}
+.user{
+  margin-top: 20px;
+}
+.user-name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1230px;
+  height: 35px;
+  border: 1px solid black;
+}
